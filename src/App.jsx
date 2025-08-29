@@ -1,10 +1,12 @@
 
 import './App.css'
 
-function Header(){
+function Header(props){
+  console.log(props);
     return (
       <header>
-        <h1>Laura's kitchen</h1>
+        <h1>{props.name}'s kitchen</h1>
+        <p>Copyright {props.year}</p>
         </header>
       );
     }
@@ -12,7 +14,7 @@ function Header(){
 function App() {
   
   return ( <div>
-    <Header />
+    <Header name="Tere" year={new Date().getFullYear()}/>
     <main>
       <h2>We serve the most delicious food around</h2>
     </main>
