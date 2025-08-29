@@ -11,13 +11,25 @@ function Header({name, year}){
       );
     }
 
+    const items = [
+      "Macaroni and Cheese",
+      "Chicken Alfredo",
+      "Caesar Salad"
+
+    ]
+  function Main({dishes}){
+    return (
+      <ul>
+        {dishes.map((dish, index) => <li style={{listStyleType:"none"}} key={index}>{dish}</li>)}
+
+      </ul>
+    )
+  }
 function App() {
   
   return ( <div>
     <Header name="Tere" year={new Date().getFullYear()}/>
-    <main>
-      <h2>We serve the most delicious food around</h2>
-    </main>
+    <Main dishes={items}/>
     </div>);
 }
 
