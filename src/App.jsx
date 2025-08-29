@@ -4,7 +4,7 @@ import './App.css'
 function Header(){
     return (
       <header>
-        <h1>Laura's kitchen</h1>
+        <h1>Laura's kitchen </h1>
         </header>
       );
     }
