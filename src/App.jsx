@@ -50,12 +50,12 @@ function Header({name, year}){
     )
   }
 function App() {
-  const [status, setStatus] = useState("Open");
+  const [status, setStatus] = useState(true);
   console.log(status);
   return ( <div>
-    <h1>The restaurant is currently {status}.</h1>
-    <button onClick={() => setStatus("Closed")}>
-      Close Restaurant
+    <h1>The restaurant is currently {status ? "open" : "closed"}.</h1>
+    <button onClick={() => setStatus(!status)}>
+      {status? "Close" : "Open"} Restaurant
     </button>
     <Header name="Tere" year={new Date().getFullYear()}/>
     <Main dishes={dishObjects}/>
