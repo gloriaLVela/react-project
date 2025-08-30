@@ -1,5 +1,6 @@
 
-import './App.css'
+import './App.css';
+import chef from "./images/chef.jpg";
 
 function Header({name, year}){
   
@@ -26,14 +27,20 @@ function Header({name, year}){
     //console.log(dishes);
   function Main({dishes}){
     return (
-      <ul>
+      <main>
+
+      <img 
+        src={chef}
+        height={200} 
+        alt="a photo of smiling chef" 
+      />
         <ul>
         {dishes.map((dish) => (
           <li style={{listStyleType:"none", textAlign:"left"}} key={dish.id}>{dish.title}</li>
           ))}
       </ul>
 
-      </ul>
+      </main>
     )
   }
 function App() {
