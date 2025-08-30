@@ -27,8 +27,11 @@ function Header({name, year}){
     //console.log(dishes);
   function Main({dishes}){
     return (
+      <>
+      <div>
+        <h2>Welcome to this beautiful restaurant!</h2>
+        </div>
       <main>
-
       <img 
         src={chef}
         height={200} 
@@ -41,6 +44,7 @@ function Header({name, year}){
       </ul>
 
       </main>
+      </>
     )
   }
 function App() {
