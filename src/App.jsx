@@ -1,6 +1,6 @@
 
 
-import {useState, useReducer} from "react";
+import {useEffect, useReducer} from "react";
 import './App.css';
 import chef from "./images/chef.jpg";
 
@@ -58,6 +58,10 @@ function App() {
     (status) => !status,
     true
   );
+
+  useEffect(() => {
+    console.log(`The restaurant is now ${status ? "open" : "closed"}.`);
+  }, [status]);
   return ( <div>
     <h1>The restaurant is currently {status ? "open" : "closed"}.</h1>
     <button onClick={toggle}>
